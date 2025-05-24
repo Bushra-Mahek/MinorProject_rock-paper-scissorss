@@ -1,0 +1,33 @@
+body{
+      background-color:black;
+      color:white;
+    }
+    img{
+      height:150px;
+      width:150px;
+      border-radius:50%;
+    }
+    .move_button{
+      background-color:transparent;
+      border:5px solid white;
+      border-radius:50%;
+      margin-right:30px;
+      cursor:pointer;
+    }
+    .resetbtn{
+      padding:10px 90px 10px 90px;
+      background-color:white;
+      font-size:15px;
+
+    }
+    .move-icon{
+      height:40px;
+      width:40px;
+    }
+
+    .autoplay{
+      padding:10px 90px 10px 90px;
+      background-color:white;
+      font-size:15px;
+
+    }
