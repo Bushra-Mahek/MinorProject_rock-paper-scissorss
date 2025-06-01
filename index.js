@@ -6,7 +6,18 @@
       displayYourResult();
       displayResult();
       displayOnWebPage();
-      
+
+      document.body.addEventListener(keydown,(event)=>{
+            if(event.key === 'r'){
+                  play('rock');
+            }
+            else if(event.key === 's'){
+                  play('scissors');
+            }
+            else if(event.key === 'p'){
+                  play('paper');
+            }
+      });
      
      
       function play(user){
@@ -237,5 +248,8 @@
 
       isPlaying = !isPlaying;
     };
+
+
+
 
   
