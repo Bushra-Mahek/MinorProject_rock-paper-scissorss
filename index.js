@@ -7,7 +7,7 @@
       displayResult();
       displayOnWebPage();
 
-      document.body.addEventListener(keydown,(event)=>{
+      document.body.addEventListener('keydown',(event)=>{
             if(event.key === 'r'){
                   play('rock');
             }
