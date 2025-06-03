@@ -117,7 +117,7 @@
   function displayOnWebPage(){
          document.querySelector('.scoree').innerHTML=`wins:${score.wins} loses:${score.loses} ties:${score.ties}`;
     }
-    }
+    
   function reset() {
   // Step 1: Inject the confirmation message with buttons
   const questionBox = document.querySelector('.question');
