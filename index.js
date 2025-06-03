@@ -253,6 +253,12 @@
   };
     
     let intervalId;
+document.addEventListener('keydown',function(event){
+      if(event.key === 'a'){
+        const autobtn = document.querySelector('.autoplay');
+        autoPlayToggle(autobtn);
+      }
+    });
     function autoplay(){
       console.log("Playing..");
     intervalId = setInterval(()=>play2(computer2),3000);
