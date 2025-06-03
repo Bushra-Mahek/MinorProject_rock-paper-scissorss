@@ -253,7 +253,7 @@
   };
     
     let intervalId;
-document.addEventListener('keydown',function(event){
+      document.addEventListener('keydown',function(event){
       if(event.key === 'a'){
         const autobtn = document.querySelector('.autoplay');
         autoPlayToggle(autobtn);
