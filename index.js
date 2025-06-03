@@ -117,12 +117,37 @@
   function displayOnWebPage(){
          document.querySelector('.scoree').innerHTML=`wins:${score.wins} loses:${score.loses} ties:${score.ties}`;
     }
-  function reset(){
-    score.wins = 0;
-    score.loses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-  }
+    }
+  function reset() {
+  // Step 1: Inject the confirmation message with buttons
+  const questionBox = document.querySelector('.question');
+  questionBox.innerHTML = `
+    Are you sure you want to reset the score?
+    <button class="yes">Yes</button>
+    <button class="no">No</button>
+  `;
+
+  // Step 2: Wait until the DOM updates and then attach listeners
+  setTimeout(() => {
+    const yesBtn = document.querySelector('.yes');
+    const noBtn = document.querySelector('.no');
+
+    yesBtn.addEventListener('click', () => {
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+
+      questionBox.textContent = '';
+      // You can also update your score display UI here
+    });
+
+    noBtn.addEventListener('click', () => {
+      questionBox.textContent = '';
+    });
+  }, 0);
+}
+
    displayYourResult('');
     displayResult('', '');
     displayOnWebPage();
